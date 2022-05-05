@@ -37,3 +37,10 @@ def post_mon_post():
 
 
 # VSCode, Pycharms CE, Spyder
+
+
+@api.get("/status")
+def get_status():
+    return {
+        "status": 1
+    }

@@ -26,3 +26,14 @@ def test_post_mon_post():
         url=f"{API_URL}/mon_post"
     )
     assert response.status_code == 200, response.content
+
+
+def test_get_health():
+    response = requests.get(
+        url=f"{API_URL}/status"
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert data["status"] == 1
