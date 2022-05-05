@@ -15,7 +15,8 @@ api = FastAPI(title="Mon API pour les DEC21 CDE")
 @api.get("/")
 def get_index():
     return {
-        "hello": "world"
+        "hello": "world",
+        "Bonjour": "le monde"
     }
 
 
