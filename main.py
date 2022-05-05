@@ -51,3 +51,10 @@ def create_user():
     return {
         "status": "User Created"
     }
+
+
+@api.get("/bye")
+def get_bye():
+    return {
+        "bye": "bye"
+    }

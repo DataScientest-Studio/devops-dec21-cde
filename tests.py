@@ -48,3 +48,14 @@ def test_post_user():
     data = response.json()
 
     assert data["status"] == 'User Created'
+
+
+def test_post_user():
+    response = requests.get(
+        url=f"{API_URL}/bye"
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert data["bye"] == 'bye'
