@@ -37,3 +37,14 @@ def test_get_health():
     data = response.json()
 
     assert data["status"] == 1
+
+
+def test_post_user():
+    response = requests.post(
+        url=f"{API_URL}/users"
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert data["status"] == 'User Created'

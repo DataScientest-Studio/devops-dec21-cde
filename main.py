@@ -44,3 +44,10 @@ def get_status():
     return {
         "status": 1
     }
+
+
+@api.post("/users")
+def create_user():
+    return {
+        "status": "User Created"
+    }
