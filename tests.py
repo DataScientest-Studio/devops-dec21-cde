@@ -44,7 +44,7 @@ def test_post_user():
         url=f"{API_URL}/users"
     )
 
-    assert response.status_code == 201, response.content
+    assert response.status_code == 200, response.content
     data = response.json()
 
     assert data["status"] == 'User Created'
